@@ -1,3 +1,7 @@
+@extends('layout')
+@section('content')
+    
+
 <h1>{{$heading}}</h1>
 @unless(count($listings)==0)
 @foreach ($listings as $listing)
@@ -5,6 +9,8 @@
   <p>{{$listing["description"]}}</p>
 
 @endforeach
+
 @else
 <p>no listing found</p>
 @endunless
+@endsection
